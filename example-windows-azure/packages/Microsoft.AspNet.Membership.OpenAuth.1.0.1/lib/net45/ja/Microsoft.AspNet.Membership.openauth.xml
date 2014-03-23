@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.Membership.OpenAuth</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.#ctor">
+      <summary>
+        <see cref="T:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.Add(System.String,System.Func{DotNetOpenAuth.AspNet.IAuthenticationClient})"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.Add(System.String,System.Func{DotNetOpenAuth.AspNet.IAuthenticationClient},System.Collections.Generic.IDictionary{System.String,System.String})"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.Add(System.String,System.Func{DotNetOpenAuth.AspNet.IAuthenticationClient},System.Object)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.GetAll"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.GetByProviderName(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.GetDisplayName(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager.TryGetByProviderName(System.String,DotNetOpenAuth.AspNet.IAuthenticationClient@)"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddFacebook(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddFacebook(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.String,System.String,System.Object)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddGoogle(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddGoogle(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.Object)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddMicrosoft(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddMicrosoft(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.String,System.String,System.Object)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddTwitter(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManagerExtensions.AddTwitter(Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager,System.String,System.String,System.Object)"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.CreateResult"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.CreateResult.ErrorMessage"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.CreateResult.IsSuccessful"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase">
+      <summary>Entity Framework Code First を使用して OAuth/OpenID プロバイダーにメンバーシップ ユーザーの関連付けデータを格納するための実装。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.#ctor(System.String,System.String,System.Func{System.String,System.String})"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.AddAccount(System.String,System.String,System.String,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.DeleteAccount(System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.GetAccountsForUser(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.GetMembershipUserName(System.String,System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.HasLocalPassword(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.EFOpenAuthMembershipDatabase.SetHasLocalPassword(System.String,System.Boolean)"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.IMembership"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.IMembership.ApplicationName"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.IMembership.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Web.Security.MembershipCreateStatus@)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.IMembership.DeleteUser(System.Object,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.IMembership.DeleteUser(System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.IMembership.GeneratePassword(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.IMembership.GetUser(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.IMembership.UpdateUser(System.Web.Security.MembershipUser)"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter">
+      <summary>メンバーシップ システムの静的 API をカプセル化する</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.ApplicationName"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Web.Security.MembershipCreateStatus@)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.DeleteUser(System.Object,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.DeleteUser(System.String,System.Boolean)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.GeneratePassword(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.GetUser(System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.MembershipAdapter.UpdateUser(System.Web.Security.MembershipUser)"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.OpenAuth">
+      <summary>ASP.NET アプリケーションで OpenAuth のログインおよびアカウントの情報を管理するための静的メソッドを提供します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.AddAccountToExistingUser(System.String,System.String,System.String,System.String)">
+      <summary>既存のメンバーシップ ユーザーに外部ログイン アカウントを追加します。</summary>
+      <param name="providerName">外部認証プロバイダーの名前。</param>
+      <param name="providerUserId">外部認証プロバイダーを使用するユーザーのユーザー ID。</param>
+      <param name="providerUserName">外部認証プロバイダーを使用するユーザーのユーザー名。</param>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザーのユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.AddLocalPassword(System.String,System.String)">
+      <summary>指定されたローカル ユーザーのローカル パスワードを追加します。</summary>
+      <param name="userName">ユーザー名。</param>
+      <param name="password">新しいローカル パスワード。</param>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.AuthenticationClients">
+      <summary>使用する外部認証サービス プロバイダー。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.ConnectionString">
+      <summary>OpenAuth アカウントの詳細が格納されているデータベースの接続文字列名を取得または設定します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.CreateUser(System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.CreateUser(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.DeleteAccount(System.String,System.String,System.String)">
+      <summary>指定されたメンバーシップ ユーザーに対する指定された外部アカウントの関連付けを削除します。</summary>
+      <returns>関連付けが正常に削除された場合は true。関連付けが見つからなかった場合は false。</returns>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザーのユーザー名。</param>
+      <param name="providerName">認証プロバイダー名。</param>
+      <param name="providerUserId">認証プロバイダーを使用するユーザーのユーザー ID。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.GetAccountsForUser(System.String)">
+      <summary>指定されたメンバーシップ ユーザーに対して登録されている外部アカウントの詳細を返します。</summary>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザーのユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.GetProviderDisplayName(System.String)">
+      <summary>プロバイダーの表示名を取得します。</summary>
+      <param name="providerName">プロバイダーの名前。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.GetProviderNameFromCurrentRequest">
+      <summary>現在の要求にリダイレクトした外部認証プロバイダーの名前を取得します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.HasLocalPassword(System.String)">
+      <summary>指定されたユーザーがこのサイトにローカル パスワードを持っているかどうかを調べます。</summary>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.IsLocalUrl(System.String)">
+      <summary>指定された URL がこの Web サイトに対してローカルかどうかを調べます。</summary>
+      <param name="url">URL。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.Login(System.String,System.String,System.Boolean)">
+      <summary>指定された認証プロバイダーとプロバイダー ユーザー ID を使用し、OpenAuth でユーザーをログインさせます。ユーザーは、この OpenAuth プロバイダーでサイトに既に登録されている必要があります。</summary>
+      <returns>ユーザーが正常にログインした場合は true。ユーザーが現在登録されていない場合などで、ログインが失敗した場合は false。</returns>
+      <param name="providerName">認証プロバイダー名。</param>
+      <param name="providerUserId">認証プロバイダーを使用するユーザーのユーザー ID。</param>
+      <param name="createPersistentCookie">作成されたログイン Cookie を永続的にする必要があるかどうかを示すフラグ。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.RequestAuthentication(System.String,System.String)">
+      <summary>サーバーのログイン ページにユーザーをリダイレクトすることによって、指定されたプロバイダーの認証を要求します。</summary>
+      <param name="providerName">認証プロバイダーの名前。</param>
+      <param name="returnUrl">戻り先のローカル URL。</param>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.UsersAccountsTableName">
+      <summary>OpenAuth 外部アカウントの詳細が格納されているデータベース テーブルの名前を取得または設定します。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.UsersDataTableName">
+      <summary>OpenAuth ユーザーの詳細が格納されているデータベース テーブルの名前を取得または設定します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuth.VerifyAuthentication(System.String)">
+      <summary>現在の要求に対するプロバイダーの結果を検証します。</summary>
+      <param name="returnUrl">外部認証プロバイダーに渡される戻り先 URL。これは、RequestAuthentication の呼び出しに渡された戻り先 URL と一致する必要があります。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})">
+      <summary>
+        <see cref="T:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData.LastUsedUtc"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData.ProviderDisplayName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData.ProviderName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData.ProviderUserId"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuthAccountData.ProviderUserName"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager">
+      <summary>ASP.NET アプリケーションで OpenAuth のログインおよびアカウントの情報を管理するためのメソッドを提供します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.#ctor(Microsoft.AspNet.Membership.OpenAuth.IMembership,Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase,Microsoft.AspNet.Membership.OpenAuth.AuthenticationClientManager)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.AddAccountToExistingUser(System.String,System.String,System.String,System.String)">
+      <summary>既存のメンバーシップ ユーザーに外部ログイン アカウントを追加します。</summary>
+      <param name="providerName">外部認証プロバイダーの名前。</param>
+      <param name="providerUserId">外部認証プロバイダーを使用するユーザーのユーザー ID。</param>
+      <param name="providerUserName">外部認証プロバイダーを使用するユーザーのユーザー名。</param>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザーのユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.AddLocalPassword(System.String,System.String)">
+      <summary>指定されたローカル ユーザーのローカル パスワードを追加します。</summary>
+      <param name="userName">ユーザー名。</param>
+      <param name="password">新しいローカル パスワード。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.CreateRandomPassword">
+      <summary>新しいローカル メンバーシップ ユーザーを作成するときに、ユーザーにランダムなパスワードを作成します。既定では、このメソッドは単に Membership.GeneratePassword メソッドを呼び出します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.CreateUser(System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.CreateUser(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.DeleteAccount(System.String,System.String,System.String)">
+      <summary>指定されたメンバーシップ ユーザーに対する指定された外部アカウントの関連付けを削除します。</summary>
+      <returns>関連付けが正常に削除された場合は true。関連付けが見つからなかった場合は false。</returns>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザーのユーザー名。</param>
+      <param name="providerName">認証プロバイダー名。</param>
+      <param name="providerUserId">認証プロバイダーを使用するユーザーのユーザー ID。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.GetAccountsForUser(System.String)">
+      <summary>指定されたメンバーシップ ユーザーに対して登録されている外部アカウントの詳細を返します。</summary>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザーのユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.GetProviderDisplayName(System.String)">
+      <summary>プロバイダーの表示名を取得します。</summary>
+      <param name="providerName">プロバイダーの名前。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.GetProviderName(System.Web.HttpContextBase)">
+      <summary>指定された要求にリダイレクトした外部認証プロバイダーの名前を取得します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.HasLocalPassword(System.String)">
+      <summary>指定されたメンバーシップ ユーザーがこのサイトにローカル パスワードを持っているかどうかを調べます。</summary>
+      <param name="membershipUserName">ローカル メンバーシップ ユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.IsLocalUrl(System.String)">
+      <summary>指定された URL がこの Web サイトに対してローカルかどうかを調べます。</summary>
+      <param name="url">URL。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.Login(System.Web.HttpContextBase,System.String,System.String,System.Boolean)">
+      <summary>指定された認証プロバイダーとプロバイダー ユーザー ID を使用し、OpenAuth でユーザーをログインさせます。ユーザーは、この OpenAuth プロバイダーでサイトに既に登録されている必要があります。</summary>
+      <returns>ユーザーが正常にログインした場合は true。ユーザーが現在登録されていない場合などで、ログインが失敗した場合は false。</returns>
+      <param name="providerName">認証プロバイダー名。</param>
+      <param name="providerUserId">認証プロバイダーを使用するユーザーのユーザー ID。</param>
+      <param name="createPersistentCookie">作成されたログイン Cookie を永続的にする必要があるかどうかを示すフラグ。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.RequestAuthentication(System.Web.HttpContextBase,System.String,System.String)">
+      <summary>サーバーのログイン ページにユーザーをリダイレクトすることによって、指定されたプロバイダーの認証を要求します。</summary>
+      <param name="context">現在の HTTP コンテキスト。</param>
+      <param name="providerName">認証プロバイダーの名前。</param>
+      <param name="returnUrl">戻り先のローカル URL。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthManager.VerifyAuthentication(System.Web.HttpContextBase,System.String)">
+      <summary>現在の要求に対するプロバイダーの結果を検証します。</summary>
+      <param name="context">現在の HTTP コンテキスト。</param>
+      <param name="returnUrl">外部認証プロバイダーに渡される戻り先 URL。これは、RequestAuthentication の呼び出しに渡された戻り先 URL と一致する必要があります。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase">
+      <summary>OAuth/OpenID プロバイダーにメンバーシップ ユーザーの関連付けデータを格納するためのデータベースを表します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.#ctor(System.String)">
+      <summary>インスタンスを作成します。</summary>
+      <param name="applicationName">メンバーシップ アプリケーション名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.AddAccount(System.String,System.String,System.String,System.String,System.Boolean)">
+      <summary>OAuth/OpenID アカウントとメンバーシップ ユーザーを関連付けるレコードを追加します。</summary>
+      <param name="providerName">OAuth/OpenID プロバイダーの名前。</param>
+      <param name="providerUserId">OAuth/OpenID のユーザー ID。</param>
+      <param name="providerUserName">OAuth/OpenID のユーザー名。</param>
+      <param name="membershipUserName">メンバーシップ ユーザーのユーザー名。</param>
+      <param name="isNewMembershipUser">このアカウント関連付けが新しいメンバーシップ ユーザーに対するものかどうかを示すフラグ。</param>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.ApplicationName">
+      <summary>メンバーシップ アプリケーション名。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.DeleteAccount(System.String,System.String,System.String)">
+      <summary>指定されたメンバーシップ ユーザーの OAuth/OpenID アカウントの関連付けレコードを削除します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.GetAccountsForUser(System.String)">
+      <summary>指定されたメンバーシップ ユーザーに対して登録されている OAuth/OpenID プロバイダーの詳細を返します。</summary>
+      <param name="membershipUserName">メンバーシップ ユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.GetMembershipUserName(System.String,System.String,System.Boolean)">
+      <summary>指定された OAuth/OpenID プロバイダーと現在関連付けられているメンバーシップ ユーザーのユーザー名を取得します。</summary>
+      <param name="providerName">OAuth/OpenID プロバイダーの名前。</param>
+      <param name="providerUserId">OAuth/OpenID のユーザー ID。</param>
+      <param name="updateLastUsed">最後に使用されたフィールドを更新するかどうかを示すフラグ。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.HasLocalPassword(System.String)">
+      <summary>指定されたメンバーシップ ユーザーがローカル パスワード セットを持っているかどうかを示すフラグを返します。</summary>
+      <param name="membershipUserName">メンバーシップ ユーザーのユーザー名。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.OpenAuthMembershipDatabase.SetHasLocalPassword(System.String,System.Boolean)">
+      <summary>指定されたメンバーシップ ユーザーがローカル パスワード セットを持っているかどうかを示すフラグを設定します。</summary>
+      <param name="membershipUserName">メンバーシップ ユーザーのユーザー名。</param>
+      <param name="value">フラグの値。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.ProviderDetails"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.ProviderDetails.DataBag"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.ProviderDetails.ExtraData"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.ProviderDetails.ProviderDisplayName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.ProviderDetails.ProviderName"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.SetPasswordResult"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.SetPasswordResult.ErrorMessage"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.SetPasswordResult.IsSuccessful"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.#ctor">
+      <summary>
+        <see cref="T:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.ApplicationName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.LastUsedUtc"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.MembershipUserName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.ProviderName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.ProviderUserId"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.ProviderUserName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthAccount.UserData"></member>
+    <member name="T:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData"></member>
+    <member name="M:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData.#ctor">
+      <summary>
+        <see cref="T:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData.Accounts"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData.ApplicationName"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData.HasLocalPassword"></member>
+    <member name="P:Microsoft.AspNet.Membership.OpenAuth.Data.OpenAuthUserData.MembershipUserName"></member>
+  </members>
+</doc>

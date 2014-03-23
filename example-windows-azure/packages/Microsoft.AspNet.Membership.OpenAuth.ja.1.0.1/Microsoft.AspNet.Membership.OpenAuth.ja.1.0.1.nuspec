@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Membership.OpenAuth.ja</id>
+    <version>1.0.1</version>
+    <title>Microsoft DotNetOpenAuth ASP.NET Membership 日本語 リソース</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/WebDeveloperTools_1_eula_JPN.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>このパッケージには、ASP.NET DotNetOpen Membership の 日本語 サテライト アセンブリが含まれています。</description>
+    <summary>Microsoft.AspNet.Membership.OpenAuth パッケージの 日本語 リソース</summary>
+    <language>ja</language>
+    <tags>Microsoft AspNet OpenId OAuth authentication</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Membership.OpenAuth" version="[1.0.1]" />
+    </dependencies>
+  </metadata>
+</package>

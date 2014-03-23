@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.FriendlyUrls</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.FriendlyUrl"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Href(System.String,System.Object[])"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Resolve(System.String)">
+      <summary> 登録されている競合回避モジュールを使用して、ファイル ハンドラーの仮想パスをフレンドリな URL に解決します。</summary>
+      <returns>フレンドリな URL。</returns>
+      <param name="virtualPath">ハンドラーの仮想パス。</param>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrl.Segments">
+      <summary> フレンドリな URL がこの要求をファイルにマップした後で残っている URL セグメント。</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings">
+      <summary>フレンドリな URL を有効にするときに使用される設定を表します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.#ctor">
+      <summary>既定値を使用して FriendlyUrlSettings クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.AutoRedirectMode">
+      <summary>フレンドリではない URL に対して実行するフレンドリな URL へのリダイレクトの種類。既定値はオフです。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.ResolverCachingMode"></member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.SwitchViewRouteName">
+      <summary>ビューの切り替えに対するユーザー要求を処理するルートの名前。既定値は "AspNet.FriendlyUrls.SwitchView" です。</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings.SwitchViewUrl">
+      <summary>ビュー切り替え要求の送信先の URL。既定値は "__FriendlyUrls_SwitchView/{view}" です。</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions">
+      <summary>フレンドリな URL を操作できる拡張メソッドを提供します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileExtension(System.Web.HttpRequest)">
+      <summary> フレンドリな URL がこの要求をマップしたファイルの拡張子を返します。</summary>
+      <returns>ファイル拡張子 (例: .aspx)。</returns>
+      <param name="httpRequest">HttpRequest オブジェクト。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileExtension(System.Web.HttpRequestBase)">
+      <summary> フレンドリな URL がこの要求をマップしたファイルの拡張子を返します。</summary>
+      <returns>ファイル拡張子 (例: .aspx)。</returns>
+      <param name="httpRequest">HttpRequestBase オブジェクト。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileVirtualPath(System.Web.HttpRequest)">
+      <summary> フレンドリな URL がこの要求をマップしたファイルの仮想パスを返します。</summary>
+      <returns>ファイルの仮想パス。</returns>
+      <param name="httpRequest">HttpRequest オブジェクト。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlFileVirtualPath(System.Web.HttpRequestBase)">
+      <summary> フレンドリな URL がこの要求をマップしたファイルの仮想パスを返します。</summary>
+      <returns>ファイルの仮想パス。</returns>
+      <param name="httpRequest">HttpRequestBase オブジェクト。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlSegments(System.Web.HttpRequest)">
+      <summary> フレンドリな URL がこの要求をファイルにマップした後で残っている URL セグメントを返します。</summary>
+      <returns>URL セグメント。</returns>
+      <param name="httpRequest">HttpRequest オブジェクト。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.HttpRequestExtensions.GetFriendlyUrlSegments(System.Web.HttpRequestBase)">
+      <summary> フレンドリな URL がこの要求をファイルにマップした後で残っている URL セグメントを返します。</summary>
+      <returns>URL セグメント。</returns>
+      <param name="httpRequest">HttpRequestBase オブジェクト。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.PreApplicationStartCode"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.PreApplicationStartCode.Start"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.RedirectMode">
+      <summary>フレンドリな URL に自動リダイレクトするときに使用するリダイレクトのモードを表します。</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Permanent">
+      <summary>永続的なリダイレクトを実行します (301 応答コード)。</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Temporary">
+      <summary>一時的なリダイレクトを実行します (302 応答コード)。</summary>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.RedirectMode.Off">
+      <summary>自動リダイレクトを実行しません (無効)。</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode"></member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Static">
+      <summary />
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Dynamic">
+      <summary />
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.ResolverCachingMode.Disabled">
+      <summary />
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection)">
+      <summary> Web フォーム ページに対するフレンドリな URL を有効にします。</summary>
+      <param name="routes">ルート コレクション。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings)">
+      <summary>Web フォーム ページに対するフレンドリな URL を有効にします。</summary>
+      <param name="routes">ルート コレクション。</param>
+      <param name="settings">フレンドリな URL を有効にするときに使用する設定。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.FriendlyUrlSettings,Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver[])">
+      <summary> 渡された競合回避モジュールを使用するフレンドリな URL を有効にします。</summary>
+      <param name="routes">ルート コレクション。</param>
+      <param name="settings">フレンドリな URL を有効にするときに使用する設定。</param>
+      <param name="resolvers">使用するフレンドリな URL の競合回避モジュール。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.RouteCollectionExtensions.EnableFriendlyUrls(System.Web.Routing.RouteCollection,Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver[])">
+      <summary> 指定された競合回避モジュールを使用するフレンドリな URL を有効にします。</summary>
+      <param name="routes">ルート コレクション。</param>
+      <param name="resolvers">使用するフレンドリな URL の競合回避モジュール。</param>
+    </member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver">
+      <summary>HTTP ハンドラーに対するフレンドリな URL を解決します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.#ctor(System.String)">
+      <summary>提供された拡張子に対する FriendlyUrlResolver を作成します。</summary>
+      <param name="fileExtension">この競合回避モジュールによって認識される物理ファイル拡張子。前にあるピリオドを含む必要があります (例: ".aspx")。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.ConvertToFriendlyUrl(System.String)">
+      <summary>通常の拡張子を含む URL を拡張子を含まないフレンドリな URL に変換します。</summary>
+      <returns>この競合回避モジュールが拡張子のない URL を提供された拡張子を含む物理ファイルに自動的にマップできる場合は、フレンドリな (拡張子を除去された) URL。それ以外の場合は null。</returns>
+      <param name="path">ファイル拡張子を含む元のパス。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)">
+      <summary>.aspx、.ashx、.mobile.aspx など、フレンドリな URL の HTTP ハンドラーを解決するときに使用する拡張子を取得します。</summary>
+      <returns>拡張子の一覧。</returns>
+      <param name="httpContext">現在の HttpContext。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.FriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.GenericHandlerFriendlyUrlResolver">
+      <summary>フレンドリな URL を汎用ハンドラー (つまり *.ashx) に解決します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.GenericHandlerFriendlyUrlResolver.#ctor"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.ConvertToFriendlyUrl(System.String)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.IFriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="T:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver">
+      <summary>フレンドリな URL を Web フォーム ページに解決します。</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.#ctor"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.GetExtensions(System.Web.HttpContextBase)">
+      <returns>
+        <see cref="T:System.Collections.Generic.IList`1" /> を返します。</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.IsMobileExtension(System.Web.HttpContextBase,System.String)">
+      <returns>
+        <see cref="T:System.Boolean" /> を返します。</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.IsMobileView(System.Web.HttpContextBase)">
+      <summary>現在のフレンドリな URL がクライアントのブラウザーおよびオーバーライドに基づいてモバイル ビューに解決されたかどうかを判定します。</summary>
+      <returns>現在のビューがモバイル ビューかどうか。</returns>
+      <param name="httpContext">ページ。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.PreprocessRequest(System.Web.HttpContextBase,System.Web.IHttpHandler)"></member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.TrySetMasterPageFile(System.Web.UI.Page,System.String)">
+      <summary>マスター ページが存在するかどうかに基づいて、指定されたページの MasterPageFile プロパティの設定を試みます。</summary>
+      <returns>マスター ページが設定されたかどうかを示すブール値。</returns>
+      <param name="page">ページ。</param>
+      <param name="masterPageFile">マスター ページ ファイルの仮想パス。</param>
+    </member>
+    <member name="M:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.TrySetMobileMasterPage(System.Web.HttpContextBase,System.Web.UI.Page,System.String)">
+      <summary>指定されたページの MasterPageFile プロパティへの、特定のモバイル マスター ページの設定を試みます。</summary>
+      <returns>マスター ページが設定されたかどうかを示すブール値。</returns>
+      <param name="httpContext">HTTP コンテキスト。</param>
+      <param name="page">ページ。</param>
+    </member>
+    <member name="F:Microsoft.AspNet.FriendlyUrls.Resolvers.WebFormsFriendlyUrlResolver.ViewSwitcherCookieName"></member>
+  </members>
+</doc>
